@@ -12,8 +12,8 @@ de 200 reais.
 <h5>Efetuar Transação:</h5> Recebe o tipo de transação e o valor. Transações de débito acima do saldo descontarão do cheque especial caso o limite não seja estourado.
 Caso o valor da transação seja maior que a soma do limite do cheque especial e o saldo, o sistema recusa a transação. As transações de crédito irão sempre primeiro quitar o cheque
 especial.
-<h5>Gerar Extrato:</h5> Gera o extrato de determinado cliente, mostrando quais as transações foram efetuadas, qual o saldo e qual o limite disponível para o cheque especial.
+<h5>Gerar Extrato:</h5> Gera o extrato de determinado cliente, mostrando quais as transações foram efetuadas, qual o saldo e qual o limite disponível para o cheque especial. Caso o cliente deva o cheque especial, o saldo aparece negativo. 
 
 
 
-/upload/main
+
