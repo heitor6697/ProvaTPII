@@ -1,5 +1,5 @@
 # ProvaTPII
-<h1>Prova de Tópicos de Informação</h1>
+<h1>Prova de Tópicos II Em Sistemas de Informação</h1>
 
 Este mini-sistema implementado através do Django, baseado em Python, foi feito como avaliação para a disciplina de Tópicos Especiais II em Sistemas de Informação.
 Ele possui um banco de dados com três diferentes tabelas: Cliente, Conta e Transação. Cada clinte está associado à somente uma conta, e cada conta está associada a (n) transações.
