@@ -1,0 +1,7 @@
+{% if sucesso == 1 %}
+<p>Operação Concluída com Sucesso.</p>   
+<a href="/cliente"><button type="submit" value="Voltar ao Inicio">Voltar ao inicio</button></a>
+{% else %}
+<p>Saldo Indisponível para Concluir a Transação</p>
+<a href="/cliente"><button type="submit" value="Voltar ao Inicio">Voltar ao inicio</button></a>
+{% endif %}

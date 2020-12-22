@@ -1,0 +1,28 @@
+
+{% if contas %}
+<h3>Clientes Cadastrados:</h3>
+<form action='cadastro' method='POST'>
+    {% csrf_token %}
+    <button type="submit">Cadastrar Novo Cliente</button> 
+</form>
+    <ul>
+    {% for conta in contas %}
+        <li> 
+            Cliente: {{conta.cliente.nome}} ||| Conta: {{conta.numero}}
+            <form action='transacao' method='GET'>
+                {% csrf_token %}
+                <input type='hidden' name= "numero-conta" value="{{ conta.numero }}">
+                <button type="submit">Efetuar Transacao</button> 
+            </form>
+            <form action='extrato' method='GET'>
+                {% csrf_token %}
+                <input type='hidden' name= "numero-conta" value="{{ conta.numero }}">
+                <button type="submit">Gerar Extrato</button> 
+            </form>            
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Não foram encontrados resultados.</p>
+{% endif %}
+

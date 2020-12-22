@@ -1,0 +1,43 @@
+
+
+<h2>Extrato da Conta</h2>
+<p>Cliente: {{conta.cliente.nome}}|| Conta:{{conta.numero}}</p>
+<form action='/cliente'>
+    <button type="submit">Voltar ao Inicio</button> 
+</form>   
+    <ul>
+    {% for transacao in transacoes %}
+        <li> 
+            {%if transacao.tipo == 'D' %}
+               <p style="color:red">-{{transacao.valor}}</p>
+            {% else %}
+                <p style="color:green">{{transacao.valor}}</p>
+            {% endif %}       
+        </li>
+    {% endfor %}
+    {% if conta.saldo == 0 %}
+        {% if conta.limite < 200 %}
+            <p>Saldo:<span style="color:red">{{conta.limite|add:"-200"}}</span> </p>
+            <p >Limite Disponível: <span style="color:blue">{{conta.limite}}</span></p>
+        {% else %}
+        <p>Saldo: 00,00 </p>
+        <p >Limite Disponível: <span style="color:blue">{{conta.limite}}</span></p>
+        {% endif %}
+    {% else %}
+        <p>Saldo:<span style="color:green"> {{conta.saldo}}</span> </p>
+        <p >Limite Disponível: <span style="color:blue">{{conta.limite}}</span></p>
+    {% endif %}
+    
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
